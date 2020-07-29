@@ -5,8 +5,11 @@ import time
 
 class Bot:
     def __init__(self):
-        wort = "LarryBerry"
-        self.driver = webdriver.Chrome("C:/Users/sauer/PycharmProjects/chromedriver.exe")
+
+        wort1 = input("Wort, das angegeben weden soll:")
+        wort = wort1
+        ChromeDriverPfad = input("Pfad ihrer Chromedriver.exe Datei:")
+        self.driver = webdriver.Chrome(ChromeDriverPfad)
         self.driver.get("https://www.surveymonkey.com/r/7JZRVLJ?embedded=1")
         time.sleep(2)
         main = True
